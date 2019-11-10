@@ -2,9 +2,4 @@
 docker-compose vault with consul
 
 
-
-
-docker-compose exec vault bash
-
-
-
+#docker-compose exec vault bash
