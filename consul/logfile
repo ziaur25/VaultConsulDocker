@@ -1,0 +1,102 @@
+Attaching to consul_consul_1
+[36mconsul_1  |[0m BootstrapExpect is set to 1; this is the same as Bootstrap mode.
+[36mconsul_1  |[0m bootstrap = true: do not enable unless necessary
+[36mconsul_1  |[0m ==> Starting Consul agent...
+[36mconsul_1  |[0m ==> Consul agent running!
+[36mconsul_1  |[0m            Version: 'v1.2.1'
+[36mconsul_1  |[0m            Node ID: 'cfc66770-20fd-ab2f-cc57-ccfcb357494a'
+[36mconsul_1  |[0m          Node name: '0d31cdb8a823'
+[36mconsul_1  |[0m         Datacenter: 'localhost' (Segment: '<all>')
+[36mconsul_1  |[0m             Server: true (Bootstrap: true)
+[36mconsul_1  |[0m        Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, DNS: 53)
+[36mconsul_1  |[0m       Cluster Addr: 172.27.0.2 (LAN: 8301, WAN: 8302)
+[36mconsul_1  |[0m            Encrypt: Gossip: false, TLS-Outgoing: false, TLS-Incoming: false
+[36mconsul_1  |[0m 
+[36mconsul_1  |[0m ==> Log data will now stream in as it occurs:
+[36mconsul_1  |[0m 
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] raft: Initial configuration (index=1): [{Suffrage:Voter ID:cfc66770-20fd-ab2f-cc57-ccfcb357494a Address:172.26.0.2:8300}]
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] raft: Node at 172.27.0.2:8300 [Follower] entering Follower state (Leader: "")
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] serf: EventMemberJoin: 0d31cdb8a823.localhost 172.27.0.2
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] serf: Attempting re-join to previously known node: e87585320c49.localhost: 172.26.0.2:8302
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] serf: EventMemberJoin: 0d31cdb8a823 172.27.0.2
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] serf: Attempting re-join to previously known node: e87585320c49: 172.26.0.2:8301
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] consul: Adding LAN server 0d31cdb8a823 (Addr: tcp/172.27.0.2:8300) (DC: localhost)
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] consul: Handled member-join event for server "0d31cdb8a823.localhost" in area "wan"
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [DEBUG] agent/proxy: managed Connect proxy manager started
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [WARN] agent/proxy: running as root, will not start managed proxies
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] agent: Started DNS server 0.0.0.0:53 (tcp)
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] agent: Started DNS server 0.0.0.0:53 (udp)
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] agent: Started HTTP server on [::]:8500 (tcp)
+[36mconsul_1  |[0m     2019/11/09 19:08:55 [INFO] agent: started state syncer
+[36mconsul_1  |[0m     2019/11/09 19:09:02 [ERR] agent: failed to sync remote state: No cluster leader
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [WARN] raft: Heartbeat timeout from "" reached, starting election
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] raft: Node at 172.27.0.2:8300 [Candidate] entering Candidate state in term 3
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [DEBUG] raft: Votes needed: 1
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [DEBUG] raft: Vote granted from cfc66770-20fd-ab2f-cc57-ccfcb357494a in term 3. Tally: 1
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] raft: Election won. Tally: 1
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] raft: Node at 172.27.0.2:8300 [Leader] entering Leader state
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] consul: cluster leadership acquired
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] consul: New leader elected: 0d31cdb8a823
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [DEBUG] consul: Skipping self join check for "0d31cdb8a823" since the cluster is too small
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] consul: member '0d31cdb8a823' joined, marking health alive
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [WARN] consul.fsm: EnsureRegistration failed: failed inserting node: node ID "cfc66770-20fd-ab2f-cc57-ccfcb357494a" for node "0d31cdb8a823" aliases existing node "e87585320c49"
+[36mconsul_1  |[0m     2019/11/09 19:09:03 [INFO] consul: member 'e87585320c49' reaped, deregistering
+[36mconsul_1  |[0m     2019/11/09 19:09:05 [INFO] agent: Synced node info
+[36mconsul_1  |[0m     2019/11/09 19:09:05 [DEBUG] agent: Node info in sync
+[36mconsul_1  |[0m     2019/11/09 19:09:05 [DEBUG] memberlist: Failed to join 172.26.0.2: dial tcp 172.26.0.2:8301: i/o timeout
+[36mconsul_1  |[0m     2019/11/09 19:09:05 [WARN] serf: Failed to re-join any previously known node
+[36mconsul_1  |[0m     2019/11/09 19:09:12 [DEBUG] http: Request GET /v1/catalog/datacenters (9.6199ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:12 [DEBUG] http: Request GET /v1/catalog/datacenters (935.4µs) from=172.27.0.1:34082
+[36mconsul_1  |[0m     2019/11/09 19:09:13 [DEBUG] http: Request GET /v1/catalog/datacenters (4.9603ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:13 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:09:13 [DEBUG] http: Request GET /v1/internal/ui/services?dc=localhost (3.067ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:16 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (1.1378ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m ==> Newer Consul version available: 1.6.1 (currently running: 1.2.1)
+[36mconsul_1  |[0m     2019/11/09 19:09:19 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (2.1038ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:19 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (5.0573ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:19 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (351.1µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:22 [DEBUG] http: Request GET /v1/catalog/datacenters (1.5787ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:22 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (8.1582ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:22 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (725µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:22 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (390.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:23 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:09:23 [DEBUG] http: Request GET /v1/catalog/datacenters (522.7µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:23 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (343.8µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:23 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (375.3µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:24 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (1.0297ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [DEBUG] http: Request GET /v1/catalog/datacenters (1.1291ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (525.8µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (391.1µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (680.9µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [DEBUG] memberlist: Failed to join 172.26.0.2: dial tcp 172.26.0.2:8302: i/o timeout
+[36mconsul_1  |[0m     2019/11/09 19:09:25 [WARN] serf: Failed to re-join any previously known node
+[36mconsul_1  |[0m     2019/11/09 19:09:31 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (488.2µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:33 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:09:33 [DEBUG] http: Request GET /v1/kv/?keys&dc=localhost&separator=%2F (234.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:34 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (479.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:35 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (320.7µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:36 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (210.2µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:36 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (235.6µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:40 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (336.2µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:41 [DEBUG] http: Request GET /v1/kv/?keys&dc=localhost&separator=%2F (262.1µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:41 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (317.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:42 [DEBUG] http: Request GET /v1/internal/ui/node/0d31cdb8a823?dc=localhost (287.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:42 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=localhost (661.9µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:42 [DEBUG] http: Request GET /v1/session/node/0d31cdb8a823?dc=localhost (604.3µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:43 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:09:43 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (1.1525ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:44 [DEBUG] http: Request GET /v1/internal/ui/services?dc=localhost (323.2µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:52 [DEBUG] http: Request GET /v1/catalog/datacenters (5.0528ms) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:52 [DEBUG] http: Request GET /v1/catalog/datacenters (1.4084ms) from=172.27.0.1:34082
+[36mconsul_1  |[0m     2019/11/09 19:09:52 [DEBUG] http: Request GET /v1/catalog/datacenters (485.4µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:52 [DEBUG] http: Request GET /v1/internal/ui/services?dc=localhost (231.7µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:09:53 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:09:56 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (330.9µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:10:00 [DEBUG] http: Request GET /v1/catalog/datacenters (410.3µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:10:00 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=localhost (688.9µs) from=172.27.0.1:34080
+[36mconsul_1  |[0m     2019/11/09 19:10:03 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:10:03 [DEBUG] consul: Skipping self join check for "0d31cdb8a823" since the cluster is too small
+[36mconsul_1  |[0m     2019/11/09 19:10:03 [INFO] consul: member '0d31cdb8a823' joined, marking health alive
+[36mconsul_1  |[0m     2019/11/09 19:10:13 [DEBUG] autopilot: Failed to remove dead servers: too many dead servers: 1/1
+[36mconsul_1  |[0m     2019/11/09 19:10:16 [DEBUG] agent: Skipping remote check "serfHealth" since it is managed automatically
+[36mconsul_1  |[0m     2019/11/09 19:10:16 [DEBUG] agent: Node info in sync

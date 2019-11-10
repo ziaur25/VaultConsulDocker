@@ -1,0 +1,3 @@
+Attaching to vault_vault_1
+[36mvault_1  |[0m Error detecting api address: Get http://127.0.0.1:8500/v1/agent/self: dial tcp 127.0.0.1:8500: connect: connection refused
+[36mvault_1  |[0m Error initializing core: missing API address, please set in configuration or via environment
